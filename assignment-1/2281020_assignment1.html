@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="yosia"></div>
+
+        <p id="evan">First p element</p>
+        <p>Second p element</p>
+
+        <button id="yosiaevan">Click</button>
+
+        <form onsubmit="validateForm()">
+            <label for="textInput">Input</label>
+            <input type="text" id="textInput">
+            <button type="submit">Submit</button>
+        </form>
+
+        <div>
+            <!-- <li>second child</li> -->
+            <ul>
+                <li>first ul child</li>
+                This is a text node
+                <li>last ul child</li>
+            </ul>
+        </div>
+
+        <script>
+            const yosia = document.getElementById('yosia');
+            yosia.innerHTML = "This is a div element";
+            yosia.style.backgroundColor = 'blue';
+            yosia.style.color = 'white';
+
+            const evan = document.getElementsByTagName('p');
+            for(let i = 0; i < evan.length; i++) {
+                evan[i].textContent = "This is a p element";
+            }
+
+            const yosiaevan = document.querySelector('#yosiaevan');
+            yosiaevan.setAttribute('style', 'background-color: red');
+            yosiaevan.addEventListener('click', function() {
+                document.getElementsByTagName('p')[1].style.fontSize = '100px';
+            });
+
+            const ul = document.querySelector('ul');
+            const div = ul.parentNode;
+            console.log(div);
+            const li = ul.childNodes;
+            for(let i = 0; i < li.length; i++) {
+                console.log(li[i].textContent);
+            }
+
+            // const firstli = ul.firstElementChild;
+            // console.log(firstli);
+            // const lastli = ul.lastElementChild;
+            // console.log(lastli);
+
+            // const nextli = firstli.nextElementSibling;
+            // console.log("Next Sibling: ", nextli.textContent);
+            // const previousli = lastli.previousElementSibling;
+            // console.log("Previous Sibling: ", previousli.textContent);
+
+            const firstchild = ul.firstChild;
+            console.log(firstchild);
+            const lastchild = ul.lastChild;
+            console.log(lastchild);
+
+            const nextsibling = firstchild.nextSibling;
+            console.log("Next Sibling: ", nextsibling);
+            const previoussibling = lastchild.previousSibling;
+            console.log("Previous Sibling: ", previoussibling);
+
+            function validateForm() {
+                const inputText = document.getElementById("textInput").value;
+                if (inputText.trim() === "") {
+                    alert("Text input cannot be empty");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>

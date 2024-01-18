@@ -40,11 +40,26 @@
                 return x + y
             }
 
+            let  y = 3
+            let x = 7
             let resultYosiaScope = yosiaScope(53)
             console.log(resultYosiaScope)
             console.log(y)
 
-            
+            // Traditional Function
+            // function yosiaMultiply(a, b) {
+            //     return a * b
+            // }
+
+            // Arrow Function
+            // let yosiaMultiply = (a, b) => {
+            //     return a * b
+            // }
+
+            // Arrow Function (shorter version)
+            let yosiaMultiply = (a, b) => a * b
+
+            console.log(yosiaMultiply(4, 3))
         </script>
     </body>
 </html>

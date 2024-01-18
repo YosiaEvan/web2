@@ -8,30 +8,30 @@
     <body>
         <script>
             // Traditional Functions
-            function yosiaMovieReadingMultiply(movie, reading) {
-                return movie * reading
-            }
-            console.log(yosiaMovieReadingMultiply(1, 3))
-
-            function yosiaMovieReadingMusicDivision(movie, reading, music) {
-                return (movie / music) / reading
-            }
-            console.log(yosiaMovieReadingMusicDivision(9, 3, 1))
-
-            function yosiaMovieReadingMusicGameModulus(movie, reading, music, game) {
-                return (game % reading) % (movie % music)
-            }
-            console.log(yosiaMovieReadingMusicGameModulus(9,3,4,2))
-            
-            // Arrow Functions
-            // let yosiaMovieReadingMultiply = (movie, reading) => movie * reading
+            // function yosiaMovieReadingMultiply(movie, reading) {
+            //     return movie * reading
+            // }
             // console.log(yosiaMovieReadingMultiply(1, 3))
 
-            // let yosiaMovieReadingMusicDivision = (movie, reading, music) => (movie / music) / reading
+            // function yosiaMovieReadingMusicDivision(movie, reading, music) {
+            //     return (movie / music) / reading
+            // }
             // console.log(yosiaMovieReadingMusicDivision(9, 3, 1))
 
-            // let yosiaMovieReadingMusicGameModulus = (movie, reading, music, game) => (game % reading) % (movie % music)
+            // function yosiaMovieReadingMusicGameModulus(movie, reading, music, game) {
+            //     return (game % reading) % (movie % music)
+            // }
             // console.log(yosiaMovieReadingMusicGameModulus(9,3,4,2))
+            
+            // Arrow Functions
+            let yosiaMovieReadingMultiply = (movie, reading) => movie * reading
+            console.log(yosiaMovieReadingMultiply(1, 3))
+
+            let yosiaMovieReadingMusicDivision = (movie, reading, music) => (movie / music) / reading
+            console.log(yosiaMovieReadingMusicDivision(9, 3, 1))
+
+            let yosiaMovieReadingMusicGameModulus = (movie, reading, music, game) => (game % reading) % (movie % music)
+            console.log(yosiaMovieReadingMusicGameModulus(9,3,4,2))
 
             // Anonymous Functions            
             let favoriteMovieGenre = function() {

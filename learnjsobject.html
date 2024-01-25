@@ -13,7 +13,7 @@
                 gender : "Male",
                 major : "Informatics Engineering",
                 hello : function() {
-                    console.log("Hello")
+                    console.log("Hello " + this.name + "!")
                 }
             }
 
@@ -26,6 +26,21 @@
             console.log(student.name)
 
             student.hello()
+
+            function Student(name, studentID, gender, major) {
+                this.name = name
+                this.studentID = studentID
+                this.gender = gender
+                this.major = major
+            }
+
+            let student1 = new Student("Abdul", "234", "Male", "Information Sistem")
+            let student2 = new Student("Badu", "315", "Male", "Informatics Engineering")
+            let student3 = new Student("Cecep", "890", "Female", "Informatics Engineering")
+
+            console.log(student1.name)
+            console.log(student3.name)
+            console.log(student3.gender)
         </script>
     </body>
 </html>

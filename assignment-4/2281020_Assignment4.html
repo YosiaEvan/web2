@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Portofolio</title>
+    </head>
+    <body>
+        <script>
+            let StudentPortofolio = {
+                name : "Yosia Evan",
+                studentID : "2281020",
+                birthdate : "23 March 2004",
+                courses : ["Daniel & Revelation", "Linear Algebra", "English IV", "Information Technology Research", "Human Computer Interaction & Social Impact", "Statistics & Probability", "Mobile Programming", "Web Programming II"],
+                skills : [],
+                addCourse : function(courseName) {
+                    this.courses.push(courseName)
+                },
+                addSkill : function(skill) {
+                    this.skills.push(skill)
+                },
+                getAge : function(thisYear) {
+                    return thisYear - 2004
+                },
+                displayPortofolio : function() {
+                    console.log(this.name)
+                    console.log(this.studentID)
+                    console.log(this.birthdate)
+                    console.log(this.courses)
+                    console.log(this.skills)
+                }
+            }
+
+            StudentPortofolio.addCourse("Data Mining")
+            StudentPortofolio.addCourse("Database")
+
+            StudentPortofolio.addSkill("Web Programming")
+            StudentPortofolio.addSkill("Create Database")
+
+            console.log(StudentPortofolio.getAge(2024))
+            console.log(StudentPortofolio.displayPortofolio())
+        </script>
+    </body>
+</html>

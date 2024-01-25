@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let yosia2281020Foods = ["Soto", "Ayam Bakar", "Rendang", "Nasi Goreng", "Mie Ayam"]
+            console.log(yosia2281020Foods)
+            
+            yosia2281020Foods.push("Yosia20Bakso") // add "Yosia20Bakso to the end of array"
+            console.log(yosia2281020Foods)
+            
+            yosia2281020Foods.pop() // remove the last element from array, in this case remove "Yosia20Bakso"
+            console.log(yosia2281020Foods)
+            
+            yosia2281020Foods.shift() // remove the first element from array, in this case remove "Soto" 
+            console.log(yosia2281020Foods)
+            
+            let subArray =  yosia2281020Foods.slice(2,4) // containing the 3rd and 4th elements, in this case "Nasi Goreng" and "Mie Ayam"
+            console.log(subArray)
+
+            yosia2281020Foods.push("Yosia20Bakso") // add "Yosia20Bakso to the end of array"
+            let favDrinks = ["Air Mineral", "Susu Almond"]
+            let mergeArray = yosia2281020Foods.concat(favDrinks) // combining two array, in this case yosia2281020Foods and favDrinks
+            console.log(mergeArray)
+
+            let sortArr = mergeArray.sort() // sorting array (a-z)
+            console.log(sortArr)
+
+            let reverseArr = mergeArray.reverse() // reverse the order of elements in the array
+            console.log(reverseArr)
+
+            let favFoodsDrinks = mergeArray.join(", ") // convert mergeArray into a string
+            console.log(favFoodsDrinks)
+
+            let splitArr = favFoodsDrinks.split(", ") // convert string back into an array
+            console.log(splitArr)
+        </script>
+    </body>
+</html>

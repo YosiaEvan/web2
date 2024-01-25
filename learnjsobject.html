@@ -11,13 +11,21 @@
                 name : "Yosia",
                 studentID : "2281020",
                 gender : "Male",
-                major : "Informatics Engineering"
+                major : "Informatics Engineering",
+                hello : function() {
+                    console.log("Hello")
+                }
             }
 
             console.log(student.name)
             console.log(student.studentID)
             console.log(student["gender"])
             console.log(student["major"])
+
+            student.name = "Budi"
+            console.log(student.name)
+
+            student.hello()
         </script>
     </body>
 </html>

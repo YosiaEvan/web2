@@ -1,0 +1,89 @@
+{
+    "student" : [
+        {
+            "id" : 1,
+            "name" : "Asep",
+            "age" : 20,
+            "grade" : "A",
+            "favoriteSubject" : {
+                "subjectName" : "Statistic & Probability",
+                "reasonForInterest" : "He like statistic",
+                "favoriteTopic" : "Data & Measurement Scale"
+            },
+            "hobbies" : {
+                "hobbyName" : "Photography",
+                "yearsInvolved" : 3,
+                "skillLevel" : "Intermediate"
+            },
+            "personalGoals" : "Learn advanced photography techniques."
+        },
+        {
+            "id" : 2,
+            "name" : "Budi",
+            "age" : 19,
+            "grade" : "B",
+            "favoriteSubject" : {
+                "subjectName" : "Mathematics",
+                "reasonForInterest" : "I love solving complex problems",
+                "favoriteTopic" : "Integral"
+            },
+            "hobbies" : {
+                "hobbyName" : "Chess",
+                "yearsInvolved" : 4,
+                "skillLevel" : "Advance"
+            },
+            "personalGoals" : "To excel in the upcoming math competition."
+        },
+        {
+            "id" : 3,
+            "name" : "Cici",
+            "age" : 19,
+            "grade" : "A",
+            "favoriteSubject" : {
+                "subjectName" : "Biology",
+                "reasonForInterest" : "Fascinated by the diversity of life and ecosystems.",
+                "favoriteTopic" : "Genetics"
+            },
+            "hobbies" : {
+                "hobbyName" : "Painting",
+                "yearsInvolved" : 2,
+                "skillLevel" : "Intermediate"
+            },
+            "personalGoals" : "Participate in a regional painting exhibition."
+        },
+        {
+            "id" : 4,
+            "name" : "Dodo",
+            "age" : 20,
+            "grade" : "A",
+            "favoriteSubject" : {
+                "subjectName" : "Computer Science",
+                "reasonForInterest" : "Passionate about coding and creating innovative solutions.",
+                "favoriteTopic" : "Artificial Intelligence"
+            },
+            "hobbies" : {
+                "hobbyName" : "Reading",
+                "yearsInvolved" : 5,
+                "skillLevel" : "Intermediate"
+            },
+            "personalGoals" : "Read at least 30 books in the current year."
+        },
+        {
+            "id" : 5,
+            "name" : "Elsa",
+            "age" : 19,
+            "grade" : "C",
+            "favoriteSubject" : {
+                "subjectName" : "Physics",
+                "reasonForInterest" : "Fascinated by the laws governing the universe.",
+                "favoriteTopic" : "Quantum Mechanics"
+            },
+            "hobbies" : {
+                "hobbyName" : "Coding",
+                "yearsInvolved" : 3,
+                "skillLevel" : "Advance"
+            },
+            "personalGoals" : "Contribute to an open-source coding project."
+        }
+    ]
+}

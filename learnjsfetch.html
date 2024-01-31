@@ -15,6 +15,23 @@
                     console.log(data.price)
                     console.log(data.RAM)
                 })
+
+            fetch('products2.json')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data)
+                    
+                    console.log(data.products[0].name)
+                    console.log(data.products[0].price)
+
+                    console.log(data.products[1].name)
+                    console.log(data.products[1].price)
+
+                    for(let i = 0; i < data.products.length; i++) {
+                        console.log(data.products[i].name)
+                        console.log(data.products[i].price)
+                    }
+                })
         </script>
     </body>
 </html>

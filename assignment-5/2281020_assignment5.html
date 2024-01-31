@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 5</title>
+    </head>
+    <body>
+        <script>
+            fetch('2281020_classmates.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+
+                for(let i = 0; i < data.student.length; i++) {
+                    console.log(data.student[i].id)
+                    console.log(data.student[i].name)
+                    console.log(data.student[i].age)
+                    console.log(data.student[i].grade)
+                    console.log(data.student[i].favoriteSubject.subjectName)
+                    console.log(data.student[i].favoriteSubject.reasonForInterest)
+                    console.log(data.student[i].favoriteSubject.favoriteTopic)
+                    console.log(data.student[i].hobbies.hobbyName)
+                    console.log(data.student[i].hobbies.yearsInvolved)
+                    console.log(data.student[i].hobbies.skillLevel)
+                    console.log(data.student[i].personalGoals)
+                }
+            })
+        </script>
+    </body>
+</html>

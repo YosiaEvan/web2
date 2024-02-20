@@ -7,7 +7,7 @@
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     </head>
     <body>
-        <div id="app">{{ message }} from {{ name }}</div>
+        <div id="app">{{ message }} from {{ name }}. I'm {{ age }} years old. I'm majoring in {{ major }} at {{ campus }}. My favorites food is {{ favFood }}</div>
 
         <script>
             const { createApp } = Vue
@@ -16,7 +16,11 @@
                 data() {
                     return {
                         message: 'Hello Vue!',
-                        name: 'Yosia'
+                        name: 'Yosia',
+                        age: 19,
+                        major: 'Informatics Engineering',
+                        campus: 'Universitas Advent Indonesia',
+                        favFood: ['Nasi Goreng', 'Soto Ayam', 'Rendang']
                     }
                 }
             }).mount('#app')

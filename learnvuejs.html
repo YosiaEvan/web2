@@ -5,11 +5,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Learn VueJS</title>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <style>
+            .red {
+                color: red;
+            }
+            .blue {
+                color: blue;
+            }
+            .yellow {
+                color: yellow;
+            }
+            .green {
+                color: green;
+            }
+        </style>
     </head>
     <body>
-        <div id="app">{{ message }} from {{ name }}.<br> 
+        <div id="app">
+            {{ message }} from {{ name }}.<br> 
             I'm {{ age }} years old. I'm majoring in {{ major }} at {{ campus }}. My favorites food is {{ favFood }}<br> 
-            My data is {{ data }}
+            My data is {{ data }}<br>
+            Message: <input type="text" v-model="message"><br>
+            Name: <input type="text" v-model="name"><br>
+
+            <h1 v-if="on">Displayed if property on is true</h1>
+            <h1 v-else>Displayed if properti on in false</h1>
+
+            Age: <input type="number" v-model="age">
+            <h3 v-if="age > 17">You're old</h3>
+            <h3 v-else>You're still young</h3><br>
+
+            <img v-bind:src="image" alt="UNAI Chapel">
+
+            <h2 v-bind:class="textColor">This is a title</h2>
+            Text color: <input type="text" v-model="textColor">
         </div>
 
         <script>
@@ -18,6 +47,9 @@
             createApp({
                 data() {
                     return {
+                        textColor: 'red',
+                        image: 'tugu_unai.jpg',
+                        on: false,
                         message: 'Hello Vue!',
                         name: 'Yosia',
                         age: 19,

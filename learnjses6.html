@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script>
+            function howMany(...args) {
+                return "You have passed " + args.length + " arguments."
+            }
+            console.log(howMany(0, 1, 2))
+            console.log(howMany("string", null, [1, 2, 3], {}))
+
+            var arr = [6, 89, 3, 45]
+            var maximus = Math.max.apply(null, arr)
+            console.log(maximus)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Learn VueJS Part 2</title>
+    </head>
+    <body>
+        <div id="app">
+            {{ message }}<br>
+            {{ name }}
+
+            <button @click="count++">Add 1</button>
+            <button @click="count--">Minus 1</button>
+            <p>Count is: {{ count }}</p>
+
+            <h3 v-if="count >= 10">Congratulations! You have 10 count or more!</h3>
+        </div>
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script>
+            const { createApp } = Vue
+
+            createApp({
+                data() {
+                    return {
+                        message: 'Hello Vue!',
+                        name: 'Yosia Evan',
+                        count: 0
+                    }
+                }
+            }).mount('#app')
+        </script>
+    </body>
+</html>

@@ -23,7 +23,7 @@
     <body>
         <div id="app">
             {{ message }} from {{ name }}.<br> 
-            I'm {{ age }} years old. I'm majoring in {{ major }} at {{ campus }}. My favorites food is {{ favFood }}<br> 
+            I'm {{ age }} years old. I'm majoring in {{ major }} at {{ campus }}. My favorites food is {{ favFoods }}<br> 
             My data is {{ data }}<br>
             Message: <input type="text" v-model="message"><br>
             Name: <input type="text" v-model="name"><br>
@@ -38,7 +38,23 @@
             <img v-bind:src="image" alt="UNAI Chapel">
 
             <h2 v-bind:class="textColor">This is a title</h2>
-            Text color: <input type="text" v-model="textColor">
+            Text color: <input type="text" v-model="textColor"><br>
+
+            <a v-bind:href="link">Google</a>
+
+            <li v-for="item in items">
+                {{ item.message }}
+            </li><br>
+
+            Favorites: <li v-for="favFood in favFoods">
+                {{ favFood }}
+            </li><br>
+
+            Data: {{ data.id }}, {{ data.username }}<br>
+
+            <button v-on:click="count++">+</button>
+            <button v-on:click="count--">-</button>
+            <p>Count is: {{ count }}</p>
         </div>
 
         <script>
@@ -47,15 +63,25 @@
             createApp({
                 data() {
                     return {
+                        count: 0,
+                        items: [
+                            {
+                                message: 'A'
+                            },
+                            {
+                                message: 'B'
+                            }
+                        ],
                         textColor: 'red',
                         image: 'tugu_unai.jpg',
+                        link: 'https://www.google.com',
                         on: false,
                         message: 'Hello Vue!',
                         name: 'Yosia',
                         age: 19,
                         major: 'Informatics Engineering',
                         campus: 'Universitas Advent Indonesia',
-                        favFood: ['Nasi Goreng', 'Soto Ayam', 'Rendang'],
+                        favFoods: ['Nasi Goreng', 'Soto Ayam', 'Rendang'],
                         data: {
                             id: 123,
                             username: 'yos',

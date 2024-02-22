@@ -15,6 +15,16 @@
             <p>Count is: {{ count }}</p>
 
             <h3 v-if="count >= 10">Congratulations! You have 10 count or more!</h3>
+
+            products:
+            <ul>
+                <li v-for="product in products">{{ product }}</li>
+            </ul>
+
+            items:
+            <ul>
+                <li v-for="item in items">{{ item.productName }} (${{ item.productPrice }})</li>
+            </ul>
         </div>
 
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -26,7 +36,13 @@
                     return {
                         message: 'Hello Vue!',
                         name: 'Yosia Evan',
-                        count: 0
+                        count: 0,
+                        products: ['Macbook Pro', 'Macbook Air', 'iPad'],
+                        items: [
+                            { productName: 'Samsung S27', productPrice: 77},
+                            { productName: 'Xiaomi 90', productPrice: 99 },
+                            { productName: 'Oppo V77', productPrice: 100 }
+                        ]
                     }
                 }
             }).mount('#app')
